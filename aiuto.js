@@ -17,24 +17,26 @@ const gestisciKeyUpSuInput = event => {
         const valoreInputField = document.getElementById("list-item-input").value
         if (valoreInputField === "") {
             alert("Please enter text")
-        } else {
+        }
 
-            const newDiv = document.createElement("div")
+        else {
 
-            newDiv.classList.add("list-item")
+            const newDiv = document.createElement("div") //crea un div
 
-            newDiv.innerText = valoreInputField
+            newDiv.classList.add("list-item") //aggiungo classe
 
-            newDiv.onclick = aggiungiClasseSelected
+            newDiv.innerText = valoreInputField //aggiungo testo
 
-            document.getElementById("list-items").appendChild(newDiv)
+            newDiv.onclick = aggiungiClasseSelected //onclick
 
-            document.getElementById("list-item-input").value = ""
+            document.getElementById("list-items").appendChild(newDiv) //appendo il div al div list item
+
+            document.getElementById("list-item-input").value = "" //svuoto il testo
         }
     }
 }
 
-const eliminaSelezionati = e => {
+const deleteSelected = e => {
 
     const list = document.getElementById("list-items")
 
